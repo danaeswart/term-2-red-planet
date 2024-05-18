@@ -1,0 +1,195 @@
+<!DOCTYPE html><!--This is a comment-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"><!--Types of letters and symbols-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--browser compatibility-->
+        <meta name="viewport" content="width-device-width, initial-scale-1.0"><!--initial size-->
+        <meta name="keywords" content="Red Planet Ventures,Planet trips, Travel,Vacation"><!-- keywords nb!-->
+        <meta name="author" content="Danae Swart, 241022">
+
+        <title>Contact Us</title>
+        <!--Bootstrap, Javascript, Google Fonts, CSS-->
+
+        
+        <!--fontsss google-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="../css/main.css">
+
+    </head>
+
+    <body>
+
+    
+
+        <div class="contactBackImg">
+            <nav class="navBarBackground">  <!-- NAV BAR CONTAINER-->
+
+                <div class="navImg"><!--logo img-->
+                    <a href="../index.html"><img src="../assets/images/logo.png"></a>
+                </div>
+                
+                <div class="linksInNav"> <!--nav bar links only div-->
+                        <a  href="../index.html" >Home</a>
+                        <a href="flights.html">Flights</a>
+                        <a class="linkActive" href="contact.html" >Contact</a>
+                </div>
+
+                <div class="searchBar"><!-- search bar-->
+                    <input type="text" placeholder="Search..">
+                </div>
+            </nav>
+
+            <div class="conUs" id="conTop">
+                <p>Contact Us</p>
+                <div id="conBut">
+                    <a href="#con" >NOW</a>
+                </div>
+               
+            </div>
+     </div>
+
+     <section class="about" >
+        <div class="aboutText">
+            <P class="ftHeading">ABOUT</P>
+            <h2>RED PLANET VENTURES</h2>
+            <p class="aboutPar">Welcome to Red Planet Ventures, where we are dedicated to turning
+                dreams of interplanetary exploration into exhilarating realities. As a
+            premier provider of space tourism experiences, we specialize in
+            crafting meticulously curated journeys to the diverse planets within
+            our solar system. From the rugged terrain of Mars to the majestic
+            rings of Saturn, our expertly designed trips offer unparalleled
+            opportunities for discovery and adventure. With a commitment to
+            safety, innovation, and customer satisfaction, we strive to exceed
+            expectations and leave a lasting impression on every traveler who
+            embarks on a voyage with us. Join us as we push the boundaries of
+            exploration and unlock the mysteries of the cosmos with Red Planet
+            Ventures.</p>
+        </div>
+        <div class="aboutImg">
+            <img src="../assets/images/contactImage.png">
+        </div>
+
+     </section>
+
+
+     <section class="contactPage" id="con">
+        <div class="contact">
+            <div class="media">
+                <p class="ftHeading">CONTACT US THROUGH OUR</p>
+                <h2>SOCIAL MEDIA PAGES</h2>
+                <div class="mediaLinks">
+                    <a href="https://www.instagram.com/openwindowinstitute/"  target=”_blank”> <img src="../assets/images/smInstagram.png"></a>
+                <a href="https://twitter.com/open_window_"  target=”_blank”><img src="../assets/images/smX.png"></a> 
+                <a href="https://www.tiktok.com/@open_window_" target="_blank"><img src="../assets/images/smTicktock.png"></a>
+                <a href="https://www.facebook.com/theopenwindow" target="_blank"> <img src="../assets/images/smFacebook.png"></a>
+                </div>
+
+            </div>
+            <div>
+                <p class="ftHeading">OR VISTIT US AT OUR</p>
+                <h2>PHYSICAL LOCATION</h2>
+                <!--------------------------section for contact page google embedd------------->
+
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3589.321356159234!2d28.206956674318672!3d-25.89180435132189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956608911ce097%3A0x519896b4b6eda40a!2sOpen%20Window%20-%20Centurion!5e0!3m2!1sen!2sza!4v1710433545983!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        
+            <form class="inform">
+                <h2>SEND US A MESSAGE
+                </h2>
+
+                <fieldset>
+                    <label>Your Name</label>
+                    <input class="bound" placeholder="Your Name" type="text" tabindex="1" required>
+                </fieldset>
+                <fieldset>
+                    <label>Your Email</label>
+                    <input class="bound" placeholder="your@email.com" type="email" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <label>Subject</label>
+                    <input class="bound" placeholder="This is optional" type="text" tabindex="3" >
+                </fieldset>
+                <fieldset>
+                    <label>Message</label>
+                    <textarea class="bound" placeholder="Hi! I'd like to ask about..." tabindex="4" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button onclick="on()" name="Submit" type="submit" id="contactSubmit">Submit</button>
+                </fieldset>
+                <div id="overlay" onclick="off()">
+                    <div class="text">MESSAGE SENT!</div>
+                    <div class="text" id="popupMessage">WELL GET BACK TO YOU SHORTLY.</div>
+                  </div>
+        
+            
+                
+
+
+
+            </form>
+       
+     </section>
+
+     <footer>
+        <div class="footerSection">
+            <div class="footerLogo">
+                <a href="../index.html"><img src="../assets/images/logo.png"></a>
+                
+                <p>Offering unforgettable trips to
+                    explore planets in our solar
+                    system.</p>
+            </div>
+            <div class="footerLinks">
+                <h3>Company</h3>
+                <a href="../index.html">Home</a>
+                <a href="flights.html">Flights</a>
+                <a  class="footActive" href="contact.html">Contact Us</a>
+            </div>
+            <div class="footerMedia">
+                <h3>Social Media Links</h3>
+                <a href="https://www.instagram.com/openwindowinstitute/"  target=”_blank”> <img src="../assets/images/smInstagram.png"></a>
+                <a href="https://twitter.com/open_window_"  target=”_blank”><img src="../assets/images/smX.png"></a> 
+                <a href="https://www.tiktok.com/@open_window_" target="_blank"><img src="../assets/images/smTicktock.png"></a>
+                <a href="https://www.facebook.com/theopenwindow" target="_blank"> <img src="../assets/images/smFacebook.png"></a>
+                  
+            </div>
+            <a href="#conTop" class="rocketToTop" >
+                <img src="../assets/images/rocket.png">
+                <p>Rocket To Top</p>
+            </a>
+        </div>
+
+        <hr>
+        <div class="footerFoot">
+            <p>All Rights Reserved @ Open Window 2024</p>
+            <div class="footerFloat">
+                <p>Terms & Conditions </p>
+                <p>Privacy & Policy</p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- --------small bit a java :) thank you w3scholss you da best--->
+<script>
+    function on() {
+      document.getElementById("overlay").style.display = "block";
+    }
+    
+    function off() {
+      document.getElementById("overlay").style.display = "none";
+    }
+    </script>
+    </body>
+
+</html>
+
