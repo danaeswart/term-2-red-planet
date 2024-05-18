@@ -44,7 +44,7 @@ body::-webkit-scrollbar {
     align-items: center;
     justify-content: space-between;
     padding: 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 85%;
     height: 75px;
     opacity: 85%;
@@ -1037,8 +1037,13 @@ hr{
     margin-top: 130px;
     width: 400px;
     height: 640px;
+    
 
     
+}
+
+.inform input ::placeholder{
+    font-family: "Porter Sans Block";
 }
 .inform h2{
     margin-top: 0px;
