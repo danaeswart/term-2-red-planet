@@ -18,6 +18,7 @@
 
 
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/script.js"></script>
 
     </head>
 
@@ -107,8 +108,26 @@
                            <div class="addCartAndButton">
                                 <p class="addButton">1</p>
                                 
-                                <p class="tripBookBtn">Book Now</p>
-                           
+                                <button 
+                                type="submit"
+                                class="tripBookBtn" onclick="openPopupSubmit()">Book Now</button>
+
+                                <!--figuring out how the popup works----------starts here-->
+                         <div               class="popupContainerSubmit" >
+                             <div class="popupSubmit" id="popupSubmit">
+                                <img src="../assets/images/rocket.png" alt="">
+                                <h2>Added to chart!</h2>
+                                <p>Successfully booked.</p>
+                                <!--maybe add a view chart option here-->
+                                  <div class=" popupButtonsContainer">
+                                    <button type="button">View Chart</button>
+                                    <button type="button" onclick="closePopupSubmit()">OK</button>
+                             </div>
+                            </div>
+                        </div>
+
+                            <!--end of added conde-->
+
                             
                            </div>
                            <hr class="hrLine"/>

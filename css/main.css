@@ -197,6 +197,7 @@ body::-webkit-scrollbar {
 
 button{
     font-weight: 700;
+    cursor: pointer;
 
 }
 
@@ -847,7 +848,78 @@ hr{
     padding-left: 50px;
     padding-right: 50px;
     font-size: 18px;
+    transition: transform 0.2s;
+    border: none;
+    font-family: "Poppins";
 
+}
+
+/*trying out a tutorial on the internet--animation  key word "popupSubmit*/
+
+.tripBookBtn:active{
+    transform: scale(1.20);
+}
+
+/*styling the pop  up container ----*/
+
+
+.popupSubmit{
+    width: 400px;
+    background-color: rgb(236, 226, 210);
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform : translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 60px ;
+    color: rgb(109, 75, 141);
+    box-shadow: 0 2px 5px;
+    visibility: hidden;
+   
+}
+
+.open-popup{
+    visibility: visible;
+    top:50%;
+    transform:  translate(-50%,-50%) scale(2);
+}
+
+.popupSubmit img{/* rocket for popup styling*/
+    width: 20%;
+    margin-top: -50px;
+  
+
+}
+
+.popupSubmit h2{
+    font-family: "Poppins";
+}
+
+.popupSubmit p{
+    font-family: "Poppins";
+    font-size: 20px;
+    
+
+}
+
+.popupSubmit button{
+    width: 35%;
+    padding:  10px 0;
+    background-color: rgb(181, 137, 223);
+    margin: 5px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 12px;
+    
+
+}
+.popupButtonsContainer{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
 }
 
 .tripBookBtn:hover{
