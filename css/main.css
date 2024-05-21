@@ -854,7 +854,7 @@ hr{
 
 }
 
-/*trying out a tutorial on the internet--animation  key word "popupSubmit*/
+/*trying out a tutorial on the internet--animation  key word "popupSubmit*   ------pop up added---------- and styling*/
 
 .tripBookBtn:active{
     transform: scale(1.20);
@@ -870,22 +870,22 @@ hr{
     -moz-border-radius:6px;
     border-radius: 6px;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform : translate(-50%, -50%) scale(0.1);
+    transform : translate(-50%, -50%) scale(1);
     text-align: center;
     padding: 0 30px 60px ;
     color: rgb(109, 75, 141);
     box-shadow: 0 2px 5px;
-    visibility: hidden;
+    position: fixed;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+    
    
 }
 
-.open-popup{
-    visibility: visible;
-    top:50%;
-    transform:  translate(-50%,-50%) scale(2);
-}
+
 
 .popupSubmit img{/* rocket for popup styling*/
     width: 20%;
@@ -901,11 +901,13 @@ hr{
 .popupSubmit p{
     font-family: "Poppins";
     font-size: 20px;
+    margin-top: 0px;
     
 
 }
 
 .popupSubmit button{
+    /* this is the view chart button on the popup*/
     width: 35%;
     padding:  10px 0;
     background-color: rgb(181, 137, 223);
@@ -913,7 +915,22 @@ hr{
     outline: none;
     font-size: 15px;
     border-radius: 12px;
+    border: none;
     
+
+}
+#okClose{
+    background-color: rgb(247, 61, 61);
+
+}
+
+#okClose:hover{
+    background-color: rgb(255, 6, 6);
+}
+
+.popupSubmit button:hover{
+    /*hover of view chart button on the popup*/
+    background-color: rgb(144, 43, 240);
 
 }
 .popupButtonsContainer{
@@ -921,6 +938,8 @@ hr{
   flex-direction: row;
  justify-content: center;
 }
+
+/* end of adding the popup -- end of styling*/
 
 .tripBookBtn:hover{
     background-color: rgb(118, 207, 177);
