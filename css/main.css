@@ -291,6 +291,7 @@ button{
     border-radius: 12px;
     padding-left: 50px;
     padding-right: 50px;
+    
    
 }
 
@@ -299,7 +300,8 @@ button{
 }
 
 .buttonBook a:hover{
-    background-color: rgb(190, 117, 21);
+    background-color:   rgb(112, 194, 167);
+   
 }
 
 
@@ -449,7 +451,8 @@ button{
 }
 
 .btnBook :hover{
-    background-color: rgb(209, 84, 12);
+    background-color: rgb(112, 194, 167);
+    
 }
 
 
@@ -865,7 +868,7 @@ hr{
 
 .popupSubmit{
     width: 400px;
-    background-color: rgb(236, 226, 210);
+    background-color: rgb(255, 255, 255);
     -webkit-border-radius:6px;
     -moz-border-radius:6px;
     border-radius: 6px;
@@ -991,6 +994,7 @@ hr{
 
 
 /* --------------------------------------------CONTACT PAGE ===-----------------------------*/
+
 
 .contactBackImg{
     background-image: url(../assets/images/headerbackBack.png);
@@ -1205,6 +1209,12 @@ input[type=text], input[type=email], textarea {
 #contactSubmit:hover{
     cursor: pointer;
     background-color: rgb(112, 194, 167);
+}
+
+/*trying to edit/ see fi the contact input form will actually alow me to style the output*/
+.outputForm code{
+    font-size: 30px;
+    color: red;
 }
 
 

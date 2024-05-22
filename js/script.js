@@ -1,5 +1,5 @@
 
-// popup for the book flights page-- your flight was added to the chart//
+// popup for the book flights page-- your flight was added to the chart - book button on flughts page//
 
     function openPopupSubmit(){
         //setting a delay timer- set to 300ms -- opens popup when someone books a flight
@@ -44,3 +44,43 @@
 
 
 // END OF CODE FOR POPUP ON FLIGHTS PAGE 
+
+
+//////////////////////////// making variables that will be used and stored on the contact page///////////
+
+    let form = document.form["formContact"];
+
+    //adding an event listener
+    form.addEventListener("submitForm", getInputContact ); 
+
+    //array for the contact form that wil store the form info
+    let arrFormData = [];
+
+    function getInputContact(event){
+        event.preventDefault();
+
+        let formData ={
+            "name": this.name.value,
+            "email": this.email.value,
+            "subject": this.subject.value,
+            "message": this.message.value,
+        }
+
+        //setting some output
+
+        let out =`
+        <P>Is this the correct information?</P>
+        <p>Name: <span>${formData.name}</span></p>
+        <p>Email: <span>${formData.email}</span></p>
+        <p>Subject: <span>${formData.subject}</span></p>
+        <p>Message: <span>${formData.message}</span></p>
+        <button>Submit Form</button>
+        <button>Go Back</button>
+        `
+
+        document.querySelector(".outputForm code").innerHTML = out;
+        arrFormData.push(formData);
+    // ask for help to be able to push this to the screen.
+    }
+// end of creating variables for the contact form
+

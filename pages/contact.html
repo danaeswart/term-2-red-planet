@@ -102,33 +102,42 @@
         </div>
 
         
-            <form class="inform">
+            <form class="inform" name="formContact">
                 <h2>SEND US A MESSAGE
                 </h2>
 
                 <fieldset>
                     <label>Your Name</label>
-                    <input class="bound" placeholder="Your Name" type="text" tabindex="1" required>
+                    <input class="bound" placeholder="Your Name" name="name" type="text" tabindex="1" required>
                 </fieldset>
                 <fieldset>
                     <label>Your Email</label>
-                    <input class="bound" placeholder="your@email.com" type="email" tabindex="2" required>
+                    <input class="bound" placeholder="your@email.com" type="email" tabindex="2" name="email" required>
                 </fieldset>
                 <fieldset>
                     <label>Subject</label>
-                    <input class="bound" placeholder="This is optional" type="text" tabindex="3" >
+                    <input class="bound" placeholder="This is optional" type="text" name="subject" tabindex="3" >
                 </fieldset>
                 <fieldset>
                     <label>Message</label>
-                    <textarea class="bound" placeholder="Hi! I'd like to ask about..." tabindex="4" required></textarea>
+                    <textarea class="bound" placeholder="Hi! I'd like to ask about..." tabindex="4" name="message" required></textarea>
                 </fieldset>
                 <fieldset>
-                    <button onclick="on()" name="Submit" type="submit" id="contactSubmit">Submit</button>
+                    <button name="submitForm" type="submit" id="contactSubmit">Submit</button>
                 </fieldset>
                <!-- <div id="overlay" onclick="off()">
                     <div class="text">MESSAGE SENT!</div>
                     <div class="text" id="popupMessage">WELL GET BACK TO YOU SHORTLY.</div>
                   </div>-->
+
+                  <!--adding a new popup to the form-->
+                  <!--well trying to add a popup to contact page-->
+                  <div class="outputForm">
+                    <br>
+                    <code>
+
+                    </code>
+                  </div>
         
             
                 
