@@ -45,6 +45,10 @@
 
 // END OF CODE FOR POPUP ON FLIGHTS PAGE 
 
+// ///////////////view cart modal code- able to add and and remoe flights and view total 
+
+
+
 
 //////////////////////////// making variables that will be used and stored on the contact page///////////
 

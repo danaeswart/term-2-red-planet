@@ -619,6 +619,15 @@ hr{
 
 }
 
+.aboutBackImg{
+    background-image: url(../assets/images/headerbackBack.png);
+    width: 100%;
+    height:150px; 
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .flightsHeading{
     font-family: "Porter Sans Block";
      font-size: 25px;
@@ -947,8 +956,17 @@ hr{
 
 /* end of adding the popup -- end of styling*/
 
+/*///////////////////////////////////////style of the popup modal on view chart////////////////////////////////*/
+
+.viewChartModal{
+    background-color: rgb(255, 254, 242);
+    width: 100%;
+    height: 50%;
+}
+
 .tripBookBtn:hover{
     background-color: rgb(118, 207, 177);
+
 
    
 }
