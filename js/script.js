@@ -50,6 +50,7 @@
 
 
 
+
 //////////////////////////// making variables that will be used and stored on the contact page///////////
 
     let form = document.form["formContact"];

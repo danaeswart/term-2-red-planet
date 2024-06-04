@@ -531,23 +531,43 @@
                              
                             </div>
 
-                            <div class="viewCart">
+                            <button type="submit" onclick="openViewCart()" class="viewCart">
                                 <p>View Cart</p>
-                            </div>
+                            </button>
 
                           
                        
                 </div>
 
-                <div class="viewChartModal">
-                 <p>Hello</p>
-                </div>
-                
+              
                 
 
             </div>
 
         </section>
+        
+        <!-- modal for view chart added ------------------------------------------------------------->
+
+        <div  class="popupViewCartContainer" >
+            <div class="popupViewCart" id="viewCartId">
+               <img src="../assets/images/rocket.png" alt="">
+               <h2>Added to chart!</h2>
+               <p>Successfully booked.</p>
+               <!--maybe add a view chart option here-->
+                 <div class="popupButtonsContainer">
+                   <button type="button">View Chart</button>
+                   <button type="button" id="okCloseViewCart" onclick="closePopupSubmit()">OK</button>
+            </div>
+           </div>
+       </div>
+
+
+     <!----------making modal w3schools-------------->
+
+    
+
+        
+           
 
         <footer>
             <div class="footerSection">
