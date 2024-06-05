@@ -77,22 +77,30 @@ let bookBtnListener = document.getElementsByClassName("tripBookBtn"); // arr of 
 for(let i=0; i< bookBtnListener.length;i++){
     let buttonArr=  bookBtnListener[i];
   
-    buttonArr.addEventListener('click', addToCart());
+    buttonArr.addEventListener('click',()=> addToCart((i)));  //add event listner to click on boook btn
 
 }
 
 
 
+//----add to cart function------
+function addToCart(pos){
+    
 
-function addToCart(){
-    console.log("yee");
-   
-    //console.log(tripPos);
-     let bookName = document.getElementsByClassName("tripName");  //get arr of names of the trips
-    ;
-     // let bookPrice= document.getElementsByClassName("tripName");
-    // console.log(bookName[tripPos].innerHTML);
-    //console.log(bookPrice[tripPos]);
+    let bookName = document.getElementsByClassName("tripName")[pos].innerHTML;  //get arr of names of the trips
+    
+    let bookPrice= document.getElementsByClassName("tripCost")[pos].innerHTML;// get price of curent element
+
+    //get img src
+   // let imgSrc= document.getElementsByClassName("tripImg")[pos].
+
+
+   //create output from values
+   let out =`
+
+   `
+   //create array and push item to arr.
+   // then loop through arr to display.
 
 }
 
