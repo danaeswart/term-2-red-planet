@@ -903,7 +903,7 @@ hr{
 .popupViewCart{
     width: 75%;
     height: 75%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(237, 203, 234);
     -webkit-border-radius:6px;
     -moz-border-radius:6px;
     border-radius: 6px;
@@ -951,10 +951,30 @@ hr{
 .cartDataContainer{
     display: flex;
     flex-direction: column;
-    margin-left: 15%;
-    width: 70%;
+    margin-left: 10%;
+    width: 80%;
     margin-right: 10%;
+   
+    overflow-y: scroll;
+    height: 80%;
+
+
 }
+
+
+
+    /* Hiding scrollbar for Chrome, Safari and Opera */
+#dataScroll::-webkit-scrollbar {
+    display: none;
+}
+
+ /*Hiding scrollbar for IE, Edge and Firefox */
+#dataScroll {
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+
 
 .headingsInCart{
     display: flex;
@@ -992,6 +1012,7 @@ hr{
    padding-top: 12px;
    padding-bottom: 12px;
     border-color: gray;
+    margin-top: 12px;
 }
 
 .itemInCart p{
@@ -1040,6 +1061,21 @@ hr{
     color: white;
     padding: 12px;
     border-radius: 5px;
+}
+
+.totalDisplay{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    justify-content: space-between;
+    margin-top: 4%;
+    
+    
+
+}
+.totalDisplay p{
+    font-size: 25px;
+    font-weight: 500;
 }
 
 

@@ -18,7 +18,7 @@
 
 
         <link rel="stylesheet" href="../css/main.css">
-        <script src="../js/script.js"></script>
+        <script src="../js/script.js" async ></script>
 
     </head>
 
@@ -553,7 +553,7 @@
                <img src="../assets/images/rocket.png" alt="">
                <h1>Your Flights:</h1>
 
-               <div class="cartDataContainer">
+               <div class="cartDataContainer" id="dataScroll">
 
                     <div class="headingsInCart">
                         <p class="headingCartFlights">Flights</p>
@@ -583,17 +583,59 @@
 
                     </div>
 
+                    <!-- second item addeddd-->
+                    <div class="itemInCart">
+                        <div class="itemImg">
+                            <img src="../assets/images/rocket.png">
+                            <P>Saturn</P>
+                        </div>
+                        
+                        <div class="itemPrice">
+                            <p>Price</p>
+                        </div>
+                       
+                        <div class="itemQuant">
+                            <input type="number" min="1">
+                        </div>
+                    
+                        <div class="itemRemove">
+                             <button class="removeItembtn">remove</button>
+                        </div>
+
+                    </div>
+
+                    <!-- 3econd item addeddd-->
+                    <div class="itemInCart">
+                        <div class="itemImg">
+                            <img src="../assets/images/rocket.png">
+                            <P>Saturn</P>
+                        </div>
+                        
+                        <div class="itemPrice">
+                            <p>Price</p>
+                        </div>
+                       
+                        <div class="itemQuant">
+                            <input type="number" min="1">
+                        </div>
+                    
+                        <div class="itemRemove">
+                             <button class="removeItembtn">remove</button>
+                        </div>
+
+                    </div>
+
+                    <div class="totalDisplay">
+                        <p>Total</p>
+                        <p class="totalAmount">34</p>
+                    </div>
+
+                    
                    
 
                </div>
 
-               <h2>Added to chart!</h2>
-               <p>Successfully booked.</p>
-               <!--maybe add a view chart option here-->
-                 <div class="popupButtonsContainer">
-                   <button type="button">View Chart</button>
-                   <button type="button" id="okCloseViewCart" onclick="closePopupSubmit()">OK</button>
-            </div>
+               
            </div>
        </div>
 

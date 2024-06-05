@@ -47,8 +47,25 @@
 
 // ///////////////view cart modal code- able to add and and remoe flights and view total 
 
+//----------remove button -------
+let removeItem= document.getElementsByClassName("removeItembtn");  //stores the buttons as an array
+console.log(removeItem);
+
+for(let i =0; i<removeItem.length;i++){  //loop through all your remove buttons
+    var buttonInArr= removeItem[i]; //the button we are currently on
+    buttonInArr.addEventListener('click',function(event){ //listens for click event- when the btn is clicked-finds the button you clicked
+        let btnClicked = event.target;   // get the btn that was clciked
+        btnClicked.parentElement.parentElement.remove();  //delete the whole row
+    })
 
 
+}
+
+
+//----------function for updating total
+function updateTotal(){
+    
+}
 
 
 //////////////////////////// making variables that will be used and stored on the contact page///////////
