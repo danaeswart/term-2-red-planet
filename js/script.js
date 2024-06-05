@@ -47,14 +47,15 @@
 
 // ///////////////view cart modal code- able to add and and remoe flights and view total 
 
-//----------remove button -------
+//----------remove button -------  listens for event--
 let removeItem= document.getElementsByClassName("removeItembtn");  //stores the buttons as an array
 //console.log(removeItem);
 
 for(let i =0; i<removeItem.length;i++){  //loop through all your remove buttons
-    var buttonInArr= removeItem[i]; //the button we are currently on
+    var buttonInArr= removeItem[i];     //the button we are currently on
+
     buttonInArr.addEventListener('click',function(event){ //listens for click event- when the btn is clicked-finds the button you clicked
-        let btnClicked = event.target;   // get the btn that was clciked
+        let btnClicked = event.target;                     // get the btn that was clciked
         btnClicked.parentElement.parentElement.remove();  //delete the whole row
         updateTotal();// update the removed item
     })
@@ -62,7 +63,40 @@ for(let i =0; i<removeItem.length;i++){  //loop through all your remove buttons
 
 }
 
-updateTotal();
+//---------- update price with quantity change event listener
+
+let quantityElement = document.getElementsByClassName("numTick");  //get arr of prices
+for( let i =0; i<quantityElement.length;i++){                    //loop through them
+    let input= quantityElement[i];                              //set as variable
+    input.addEventListener('change', updateTotal);              //add event listerner to the change and update the total
+}
+
+//------------ update chart when book btn is clicked - added event list
+
+let bookBtnListener = document.getElementsByClassName("tripBookBtn"); // arr of book btns - to add listenr
+for(let i=0; i< bookBtnListener.length;i++){
+    let buttonArr=  bookBtnListener[i];
+  
+    buttonArr.addEventListener('click', addToCart());
+
+}
+
+
+
+
+function addToCart(){
+    console.log("yee");
+   
+    //console.log(tripPos);
+     let bookName = document.getElementsByClassName("tripName");  //get arr of names of the trips
+    ;
+     // let bookPrice= document.getElementsByClassName("tripName");
+    // console.log(bookName[tripPos].innerHTML);
+    //console.log(bookPrice[tripPos]);
+
+}
+
+
 
 //----------function for updating total
 function updateTotal(){
@@ -80,7 +114,10 @@ function updateTotal(){
   
 
          let itemPrice= parseFloat(tempPrice); // turn string to int.
-         total+=itemPrice;  //total price
+         let numTickets = document.getElementsByClassName("numTick")[i].value;// grab the value of the element where you are at
+         
+
+         total+=(itemPrice*numTickets);  //total = price *
          
     }
 
