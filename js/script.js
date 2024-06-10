@@ -207,6 +207,26 @@ function updateTotal(){
 updateTotal();
 
 
+//------------------------end of modal for cart------------------
+
+
+// search home ----------------starts here lol------------
+function searchHome(){
+    let input= document.getElementsByClassName("searchBar")[0].value;
+    input= input.toLowerCase();
+    let toFind= document.getElementsByClassName("listItem");
+
+    for(let f=0; f<toFind.length; f++){
+        if(!toFind[f].innerHTML.toLowerCase().includes(input)){
+            toFind[f].style.display="none";
+        }else{
+            toFind[f].style.display="list-item";
+        }
+        
+    }
+}
+
+
 
 //////////////////////////// making variables that will be used and stored on the contact page///////////
 
