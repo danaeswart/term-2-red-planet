@@ -77,19 +77,27 @@ let bookBtnListener = document.getElementsByClassName("tripBookBtn"); // arr of 
 for(let i=0; i< bookBtnListener.length;i++){
     let buttonArr=  bookBtnListener[i];
   
-    buttonArr.addEventListener('click',()=> addToCart((i)));  //add event listner to click on boook btn
+    buttonArr.addEventListener('click',()=> addToCart((i)));  //add event listner to click on boook btn passing through a parimiter
 
 }
 
 
 
+
 //----add to cart function------
 function addToCart(pos){
+    console.log(pos);   //--gets the position of the btn we are on.
     
 
     let bookName = document.getElementsByClassName("tripName")[pos].innerHTML;  //get arr of names of the trips
-    
+    console.log(bookName);
     let bookPrice= document.getElementsByClassName("tripCost")[pos].innerHTML;// get price of curent element
+    console.log(bookPrice);
+     let bookImgSrc= document.getElementsByClassName("imgSrc")[pos].src;
+     console.log(document.getElementsByClassName("tripImg")[pos]);
+     console.log(bookImgSrc);
+
+     /// arr[boj 1, obj1,] //
 
     //get img src
    // let imgSrc= document.getElementsByClassName("tripImg")[pos].
@@ -135,6 +143,7 @@ function updateTotal(){
     
 
 }
+updateTotal();
 
 
 
