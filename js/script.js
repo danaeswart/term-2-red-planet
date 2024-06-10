@@ -69,11 +69,12 @@ for(let i =0; i<removeItem.length;i++){  //loop through all your remove buttons
 
 
 //---------- update price with quantity change event listener
-
+function addQuantiChangeEventListen(){
 let quantityElement = document.getElementsByClassName("numTick");  //get arr of prices
 for( let i =0; i<quantityElement.length;i++){                    //loop through them
     let input= quantityElement[i];                              //set as variable
     input.addEventListener('change', updateTotal);              //add event listerner to the change and update the total
+}
 }
 
 //------------ update chart when book btn is clicked - added event list
@@ -87,14 +88,21 @@ for(let i=0; i< bookBtnListener.length;i++){
 
 }
 
-// checking if there is anything in your chart
+//checking if there is anything in your chart
 
 function checkInChart(){
     let itemsArr= document.getElementsByClassName("itemInCart");
     if(itemsArr.length==0){
         
-    }
+       alert("There are no items in your cart");
+   
+ }else{
+    closeViewCart();
+ }
+ 
 }
+// checkInChart();
+
 
 
 
@@ -152,26 +160,18 @@ function addToCart(pos){
             document.getElementById("itemInCartContainer").innerHTML+= newItemContent;
     addEventToRemoveBtn();
     updateTotal();
-            
+    addQuantiChangeEventListen();
+   
         }
+///---- close the modal and open modal
 
-     
+ function openViewCart(){
+    document.getElementById("viewCartId").style.display="block";
+ }
 
-
-    // add info to array to store the 
-
-     /// arr[boj 1, obj1,] //
-
-    //get img src
-   // let imgSrc= document.getElementsByClassName("tripImg")[pos].
-
-
-   //create output from values
- 
-   //create array and push item to arr.
-   // then loop through arr to display.
-
-
+ function closeViewCart(){
+    document.getElementById("viewCartId").style.display="none";
+ }
 
      
 

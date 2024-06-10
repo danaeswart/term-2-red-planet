@@ -121,7 +121,7 @@
                                 <p>Successfully booked.</p>
                                 <!--maybe add a view chart option here-->
                                   <div class=" popupButtonsContainer">
-                                    <button type="button">View Chart</button>
+                                    <button type="button" onclick="openViewCart(),closePopupSubmit()">View Chart</button>
                                     <button type="button" id="okClose" onclick="closePopupSubmit()">OK</button>
                              </div>
                             </div>
@@ -565,8 +565,7 @@
 
                     <div id="itemInCartContainer">
                    
-
-                    
+                       
 
                     <!-- adds code-->
                    
@@ -582,13 +581,24 @@
                         <p id="totalAmount"></p>
                     </div>
 
-                    
                    
+                </div>
 
-               </div>
+                <div class="modalButtonsContainer">
+                    <button id="continueShoppinBtn" onclick="closeViewCart(),closePopupSubmit()">Continue Shopping</button>
+                    <button id="checkMeOut" onclick="checkInChart(),closePopupSubmit() ">Checkout</button>
+                       
+                      
+            </div>
+   
+               
+              
+                
+              </div>
+              
 
                
-           </div>
+          
        </div>
 
 

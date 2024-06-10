@@ -8,6 +8,7 @@ body{
     padding: 0px;
     overflow-y: scroll;
     margin-bottom: 25px;
+    font-family: "Poppins";
     background-size: cover;
 
   
@@ -902,7 +903,7 @@ hr{
 /*//////////// adding code for the view cart popup///////////*/
 .popupViewCart{
     width: 75%;
-    height: 75%;
+    height:75%;
     background-color: rgb(237, 203, 234);
     -webkit-border-radius:6px;
     -moz-border-radius:6px;
@@ -918,6 +919,7 @@ hr{
     display: block;
     z-index: 2;
     cursor: pointer;
+    display: none;
 
 }
 
@@ -956,7 +958,7 @@ hr{
     margin-right: 10%;
    
     overflow-y: scroll;
-    height: 80%;
+    height: 70%;
 
 
 }
@@ -1084,6 +1086,25 @@ hr{
     font-size: 25px;
     font-weight: 500;
     margin-right: 3%;
+}
+
+.modalButtonsContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalButtonsContainer button{
+    width: 12%;
+    padding: 17px;
+    
+    border-style: none;
+    border-radius: 12px;
+    color: white;
+    background-color: rgb(235, 25, 25);
+}
+
+.modalButtonsContainer button:hover{
+    background-color: rgb(32, 174, 127);
 }
 
 
