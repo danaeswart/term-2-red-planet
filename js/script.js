@@ -48,6 +48,7 @@
 // ///////////////view cart modal code- able to add and and remoe flights and view total 
 
 //----------remove button -------  listens for event--
+function addEventToRemoveBtn(){
 let removeItem= document.getElementsByClassName("removeItembtn");  //stores the buttons as an array
 //console.log(removeItem);
 
@@ -62,6 +63,10 @@ for(let i =0; i<removeItem.length;i++){  //loop through all your remove buttons
 
 
 }
+}
+
+
+
 
 //---------- update price with quantity change event listener
 
@@ -79,25 +84,33 @@ for(let i=0; i< bookBtnListener.length;i++){
   
     buttonArr.addEventListener('click',()=> addToCart((i)));  //add event listner to click on boook btn passing through a parimiter
 
+
+}
+
+// checking if there is anything in your chart
+
+function checkInChart(){
+    let itemsArr= document.getElementsByClassName("itemInCart");
+    if(itemsArr.length==0){
+        
+    }
 }
 
 
-// variables for the array that will store objects in an array
-
-let bookingsArray=[];
 
 //----add to cart function------
 function addToCart(pos){
     console.log(pos);   //--gets the position of the btn we are on.
     
-
+    //get the name price and img of current button that we are on
+    
     let bookName = document.getElementsByClassName("tripName")[pos].innerHTML;  //get arr of names of the trips
     
     let bookPrice= document.getElementsByClassName("tripCost")[pos].innerHTML;// get price of curent element
     
      let bookImgSrc= document.getElementsByClassName("imgSrc")[pos].src;
     
-
+    //check if this booking is already in the list
      let itemsInCart= document.getElementsByClassName("bookedTripName");
      for(let i =0;i<itemsInCart.length;i++){
         if(bookName==itemsInCart[i].innerHTML){
@@ -112,12 +125,7 @@ function addToCart(pos){
             return;  //leave function
         }
     }
-
-    //add to array of bookings
-  //  bookingsArray.push()
-
-           // let itemContainer= document.getElementsByClassName("itemInCartContainer")[0];
-            let cartRow = document.createElement('div');
+        // else create new item to add to cart
           
 
             let newItemContent=`
@@ -142,6 +150,9 @@ function addToCart(pos){
                     </div>
             `
             document.getElementById("itemInCartContainer").innerHTML+= newItemContent;
+    addEventToRemoveBtn();
+    updateTotal();
+            
         }
 
      

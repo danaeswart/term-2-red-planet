@@ -1029,13 +1029,17 @@ hr{
     justify-content: start;
 
 }
+
+
 .itemImg p{
     padding-left: 5px;
 }
 .itemImg img{
     width:60px;
     height: 60px;
-    margin-top: 10px;
+    margin-top: 1%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .itemPrice{
