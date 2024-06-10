@@ -82,7 +82,9 @@ for(let i=0; i< bookBtnListener.length;i++){
 }
 
 
+// variables for the array that will store objects in an array
 
+let bookingsArray=[];
 
 //----add to cart function------
 function addToCart(pos){
@@ -90,12 +92,62 @@ function addToCart(pos){
     
 
     let bookName = document.getElementsByClassName("tripName")[pos].innerHTML;  //get arr of names of the trips
-    console.log(bookName);
+    
     let bookPrice= document.getElementsByClassName("tripCost")[pos].innerHTML;// get price of curent element
-    console.log(bookPrice);
+    
      let bookImgSrc= document.getElementsByClassName("imgSrc")[pos].src;
-     console.log(document.getElementsByClassName("tripImg")[pos]);
-     console.log(bookImgSrc);
+    
+
+     let itemsInCart= document.getElementsByClassName("bookedTripName");
+     for(let i =0;i<itemsInCart.length;i++){
+        if(bookName==itemsInCart[i].innerHTML){
+            //get the input and add one if it exists in the list
+            
+           let intQuantity= parseInt(document.getElementsByClassName("numTick")[i].value);
+           intQuantity++;
+           document.getElementsByClassName("numTick")[i].setAttribute("value",intQuantity);
+
+           
+            updateTotal();
+            return;  //leave function
+        }
+    }
+
+    //add to array of bookings
+  //  bookingsArray.push()
+
+           // let itemContainer= document.getElementsByClassName("itemInCartContainer")[0];
+            let cartRow = document.createElement('div');
+          
+
+            let newItemContent=`
+             <div class="itemInCart">
+                        <div class="itemImg">
+                            <img src="${bookImgSrc}">
+                            <P class="bookedTripName">${bookName}</P>
+                        </div>
+                        
+                        <div class="itemPrice">
+                            <p class="priceInRand">${bookPrice}</p>
+                        </div>
+                       
+                        <div class="itemQuant">
+                            <input class="numTick" value="1" type="number" min="1">
+                        </div>
+                    
+                        <div class="itemRemove">
+                             <button class="removeItembtn">remove</button>
+                        </div>
+
+                    </div>
+            `
+            document.getElementById("itemInCartContainer").innerHTML+= newItemContent;
+        }
+
+     
+
+
+    // add info to array to store the 
 
      /// arr[boj 1, obj1,] //
 
@@ -104,15 +156,13 @@ function addToCart(pos){
 
 
    //create output from values
-   let out =`
-
-   `
+ 
    //create array and push item to arr.
    // then loop through arr to display.
 
-}
 
 
+     
 
 //----------function for updating total
 function updateTotal(){
