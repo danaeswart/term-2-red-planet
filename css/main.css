@@ -79,8 +79,9 @@ body::-webkit-scrollbar {
   .searchBar{
    /*---------- style needs some work*/
    width: 250px;
+   height: 50px;
    /*--------------only works on home page follow a tutorial and start here with searcj*/
-     margin-top: 11%;
+     margin-top: 12px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -97,7 +98,7 @@ body::-webkit-scrollbar {
   }
 
   .listItem{
-    
+    display: none;
     font-size: 15px;
     color: rgb(26, 4, 27);
     background-color: white;

@@ -40,21 +40,28 @@
         document.getElementById("popup").style.display="none";
     
         
-    }
+    } 
 
 
 // END OF CODE FOR POPUP ON FLIGHTS PAGE 
+
+
 // search home ----------------starts here lol------------
+
+
 function searchHome(){
     
     let input= document.getElementById("searchBarHome").value.toLowerCase();
-    
-   // console.log(input);
-    let items= document.getElementsByClassName("listItem").value;
+   
+    let items= document.getElementsByClassName("listItem");
+
+   isEmptySearch();
+
    
 
     for(let i=0; i<items.length;i++){
         let itemText= items[i].textContent.toLowerCase();
+        console.log(itemText);
 
         if(itemText.includes(input)){
             items[i].style.display="block";
@@ -62,17 +69,27 @@ function searchHome(){
         }else{
             items[i].style.display="none";
         }
+        isEmptySearch();
+    }
+    isEmptySearch();
+}
+
+
+
+function isEmptySearch(){
+    if(document.getElementById("searchBarHome").value==""){
+        document.getElementsByClassName("listItem").style.display="none";
+        return;
     }
 
-    // for(let f=0; f<toFind.length; f++){
-    //     if(!toFind[f].innerHTML.toLowerCase().includes(input)){
-    //         toFind[f].style.display="none";
-    //     }else{
-    //         toFind[f].style.display="block";
-    //     }
-        
-    // }
 }
+
+// add event listener if the search is empty
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchBarHome');
+    searchInput.addEventListener('keyup', searchHome());
+    searchInput.addEventListener('blur', hideSearchHome()); 
+});
 
 // ///////////////view cart modal code- able to add and and remoe flights and view total 
 
