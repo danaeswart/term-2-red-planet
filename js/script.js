@@ -44,6 +44,35 @@
 
 
 // END OF CODE FOR POPUP ON FLIGHTS PAGE 
+// search home ----------------starts here lol------------
+function searchHome(){
+    
+    let input= document.getElementById("searchBarHome").value.toLowerCase();
+    
+   // console.log(input);
+    let items= document.getElementsByClassName("listItem").value;
+   
+
+    for(let i=0; i<items.length;i++){
+        let itemText= items[i].textContent.toLowerCase();
+
+        if(itemText.includes(input)){
+            items[i].style.display="block";
+
+        }else{
+            items[i].style.display="none";
+        }
+    }
+
+    // for(let f=0; f<toFind.length; f++){
+    //     if(!toFind[f].innerHTML.toLowerCase().includes(input)){
+    //         toFind[f].style.display="none";
+    //     }else{
+    //         toFind[f].style.display="block";
+    //     }
+        
+    // }
+}
 
 // ///////////////view cart modal code- able to add and and remoe flights and view total 
 
@@ -204,65 +233,83 @@ function updateTotal(){
     
 
 }
-updateTotal();
+
 
 
 //------------------------end of modal for cart------------------
 
 
-// search home ----------------starts here lol------------
-function searchHome(){
-    let input= document.getElementsByClassName("searchBar")[0].value;
-    input= input.toLowerCase();
-    let toFind= document.getElementsByClassName("listItem");
 
-    for(let f=0; f<toFind.length; f++){
-        if(!toFind[f].innerHTML.toLowerCase().includes(input)){
-            toFind[f].style.display="none";
-        }else{
-            toFind[f].style.display="list-item";
-        }
-        
-    }
-}
 
 
 
 //////////////////////////// making variables that will be used and stored on the contact page///////////
 
-    let form = document.form["formContact"];
+function thankYouMessage(){
+    
+    let name = document.getElementById("nameContact").value;
+    console.log(name);
+    let out= `
+    <div class="contactPopup" >
+                   <img src="../assets/images/rocket.png" alt="">
+                   <h2>Thank you ${name}</h2>
+                   <p>Your message was received!</p>
+                   
+                      
+                       <button type="button" id="closePopupContact" onclick="closePopupCon()">OK</button>
+                
+               </div>
+    `
+ 
+    document.getElementById("contactPop").style.display="block";
+    document.getElementById("contactPop").innerHTML= out;
+   
+}
 
-    //adding an event listener
-    form.addEventListener("submitForm", getInputContact ); 
 
-    //array for the contact form that wil store the form info
-    let arrFormData = [];
+function closePopupCon(){
+    
+    document.getElementById("contactPop").style.display="none";
+}
+    
 
-    function getInputContact(event){
-        event.preventDefault();
+// let form = document.form["formContact"];
 
-        let formData ={
-            "name": this.name.value,
-            "email": this.email.value,
-            "subject": this.subject.value,
-            "message": this.message.value,
-        }
+//     //adding an event listener
+//     form.addEventListener("submitForm", getInputContact ); 
 
-        //setting some output
+//     //array for the contact form that wil store the form info
+//     let arrFormData = [];
 
-        let out =`
-        <P>Is this the correct information?</P>
-        <p>Name: <span>${formData.name}</span></p>
-        <p>Email: <span>${formData.email}</span></p>
-        <p>Subject: <span>${formData.subject}</span></p>
-        <p>Message: <span>${formData.message}</span></p>
-        <button>Submit Form</button>
-        <button>Go Back</button>
-        `
+//     function getInputContact(event){
+//         event.preventDefault();
 
-        document.querySelector(".outputForm code").innerHTML = out;
-        arrFormData.push(formData);
-    // ask for help to be able to push this to the screen.
-    }
-// end of creating variables for the contact form
+//         let formData ={
+//             "name": this.name.value,
+//             "email": this.email.value,
+//             "subject": this.subject.value,
+//             "message": this.message.value,
+//         }
+
+//         console.log(name);
+//         console.log(email);
+
+//         //setting some output
+
+//         let out =`
+//         <div class="contactPopup" >
+//                    <img src="../assets/images/rocket.png" alt="">
+//                    <h2>Thank you ${name}</h2>
+//                    <p>Your message was received!</p>
+
+//                        <button type="button" id="closePopupContact" onclick="closePopupContact()">OK</button>
+                
+//                </div>
+//         `
+//         document.getElementById("contactPop").style.display="block";
+//         document.getElementById("contactPop").innerHTML= out;
+//         arrFormData.push(formData); 
+//     // ask for help to be able to push this to the screen.
+//     }
+// // end of creating variables for the contact form
 

@@ -18,6 +18,7 @@
 
 
         <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/script.js" async ></script>
 
     </head>
 
@@ -109,7 +110,7 @@
 
                 <fieldset>
                     <label>Your Name</label>
-                    <input class="bound" placeholder="Your Name" name="name" type="text" tabindex="1" required>
+                    <input id="nameContact" class="bound" placeholder="Your Name" name="name" type="text" tabindex="1" required>
                 </fieldset>
                 <fieldset>
                     <label>Your Email</label>
@@ -124,21 +125,21 @@
                     <textarea class="bound" placeholder="Hi! I'd like to ask about..." tabindex="4" name="message" required></textarea>
                 </fieldset>
                 <fieldset>
-                    <button name="submitForm" type="submit" id="contactSubmit">Submit</button>
+                    <button name="submitForm" type="button" id="contactSubmit" onclick="thankYouMessage()">Submit</button>
                 </fieldset>
-               <!-- <div id="overlay" onclick="off()">
-                    <div class="text">MESSAGE SENT!</div>
-                    <div class="text" id="popupMessage">WELL GET BACK TO YOU SHORTLY.</div>
-                  </div>-->
-
-                  <!--adding a new popup to the form-->
-                  <!--well trying to add a popup to contact page-->
-                  <div class="outputForm">
-                    <br>
-                    <code>
-
-                    </code>
-                  </div>
+               <!-------modal popup for contact-->
+                  
+               <div  id="contactPop">
+                <div class="contactPopup" >
+                   <img src="../assets/images/rocket.png" alt="">
+                   <h2>Thank you</h2>
+                   <p>Your message was received!</p>
+                   
+                      
+                       <button type="button" id="closePopupContact" onclick="closePopupCon()">OK</button>
+                
+               </div>
+           </div>
         
             
                 

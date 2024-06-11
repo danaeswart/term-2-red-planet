@@ -92,6 +92,7 @@ body::-webkit-scrollbar {
     list-style: none;
     padding-left: 2%;
     margin-top: 3px;
+
  
   }
 
@@ -901,8 +902,61 @@ hr{
 
 /*trying out a tutorial on the internet--animation  key word "popupSubmit*   ------pop up added---------- and styling*/
 
+
 .tripBookBtn:active{
     transform: scale(1.20);
+}
+
+/*popoo for contact page-------------------------------------------------------*/
+
+
+#contactPop{
+    display: none;
+}
+.contactPopup{
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%) scale(1);
+    text-align: center;
+    padding: 0 30px 60px ;
+    color: rgb(109, 75, 141);
+    box-shadow: 0 2px 5px;
+    position: fixed;
+   
+    z-index: 2;
+    cursor: pointer;
+
+}
+
+.contactPopup img{
+    width: 14%;
+    margin-top: -50px;
+  
+}
+
+.contactPopup h2{
+    margin-bottom: 0;
+    padding-bottom: 1px;
+}
+
+#closePopupContact{
+    border: none;
+    color: rgb(238, 235, 231);
+    background-color: rgb(220, 9, 9);
+    width: 30%;
+    
+    padding: 3%;
+    border-radius: 12px;
+}
+
+#closePopupContact:hover{
+    background-color: rgb(29, 175, 126);
 }
 
 /*styling the pop  up container ----*/
