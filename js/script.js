@@ -69,27 +69,58 @@ function searchHome(){
         }else{
             items[i].style.display="none";
         }
-        isEmptySearch();
+    
     }
     isEmptySearch();
+
+
+}
+
+//search for flights--------------
+function searchFlights(){
+    
+    let input= document.getElementById("searchBarFligts").value.toLowerCase();
+   
+    let items= document.getElementsByClassName("listItemf");
+
+
+
+   
+
+    for(let i=0; i<items.length;i++){
+        let itemText= items[i].textContent.toLowerCase();
+        console.log(itemText);
+
+        if(itemText.includes(input)){
+            items[i].style.display="block";
+
+        }else{
+            items[i].style.display="none";
+        }
+    
+    }
+
+
+
 }
 
 
 
+
+
+
+
 function isEmptySearch(){
-    if(document.getElementById("searchBarHome").value==""){
+    if(document.getElementById("searchBarHome").value===""){
         document.getElementsByClassName("listItem").style.display="none";
         return;
     }
 
 }
 
-// add event listener if the search is empty
-document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchBarHome');
-    searchInput.addEventListener('keyup', searchHome());
-    searchInput.addEventListener('blur', hideSearchHome()); 
-});
+//////// --------- code for scrolling to that part of th html
+
+
 
 // ///////////////view cart modal code- able to add and and remoe flights and view total 
 

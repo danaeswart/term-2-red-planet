@@ -40,7 +40,16 @@
                             <a href="about.html">About</a>
                     </div>
                     <div class="searchBar"><!-- search bar-->
-                        <input type="text" placeholder="Search..">
+                        <input type="text" onkeyup="searchFlights()" id="searchBarFligts" placeholder="Search..">
+                        <ul class="homeList">
+                            <a href="#flimarsLink"><li class="listItemf" >Mars</li></a>
+                           <a href="#fliJupLink"> <li class="listItemf">Neptune</li></a>
+                           <a href="#fliGiaLink"><li class="listItemf">Giant</li></a> 
+                           <a href="#fliSatLink"><li class="listItemf" >Saturn</li></a>
+                           <a href="#fliUraLink"> <li class="listItemf">Uranus</li></a>
+                           <a href="#fliMoonLink"><li class="listItemf">Moon</li></a> 
+                            
+                        </ul>
                     </div>
 
                     
@@ -72,7 +81,7 @@
             
         </div>
 
-        <section class="tripContainer"><!-------------new container-->
+        <section class="tripContainer" id="fliMarsLink"><!-------------new container-->
             <div class="tripSection">
                 <div class="tripImg">
                     <img class="imgSrc"  src="../assets/images/flighhtMars.png">
@@ -160,7 +169,7 @@
         </section>
 
 
-        <section class="tripContainer2"><!-------------new container-->
+        <section class="tripContainer2" id="fliJupLink"><!-------------new container-->
             <div class="tripSection">
                 <div class="tripImg">
                     <img class="imgSrc"  src="../assets/images/flightNeptune.png">
@@ -234,7 +243,7 @@
 
         </section>
 
-        <section class="tripContainer"><!-------------new container-->
+        <section class="tripContainer" id="fliGiaLink"><!-------------new container-->
             <div class="tripSection">
                 <div class="tripImg">
                     <img class="imgSrc" src="../assets/images/flightJupiter.png">
@@ -310,7 +319,7 @@
 
         </section>
 
-        <section class="tripContainer2"><!-------------new container-->
+        <section class="tripContainer2" id="fliSatLink"><!-------------new container-->
             <div class="tripSection">
                 <div class="tripImg">
                     <img class="imgSrc"  src="../assets/images/flightSaturn.png">
@@ -386,7 +395,7 @@
 
         </section>
 
-        <section class="tripContainer"><!-------------new container-->
+        <section class="tripContainer" id="fliUraLink"><!-------------new container-->
             <div class="tripSection">
                 <div class="tripImg">
                     <img class="imgSrc"  src="../assets/images/flightUranus.png">
@@ -463,7 +472,7 @@
 
         </section>
 
-        <section class="tripContainer2"><!-------------new container-->
+        <section class="tripContainer2" id="fliMoonLink"><!-------------new container-->
             <div class="tripSection">
                 <div class="tripImg">
                     <img class="imgSrc" src="../assets/images/flightMoon.png">

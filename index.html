@@ -34,18 +34,18 @@
                     </div>
                     
                     <div class="linksInNav"> <!--nav bar links only div-->
-                            <a class="linkActive" onclick="test()" href="index.html" class="active">Home</a>
+                            <a class="linkActive" href="index.html" class="active">Home</a>
                             <a href="pages/flights.html">Flights</a>
                             <a href="pages/contact.html">Contact</a>
                             <a href="pages/about.html">About</a>
                     </div>
 
                     <div class="searchBar"><!-- search bar-->
-                        <input id="searchBarHome" type="text" onkeyup="searchHome()"  placeholder="Search..">
-                        <ul id="homeList">
-                            <li class="listItem">Mars</li>
-                            <li class="listItem">Shuttles</li>
-                            <li class="listItem">Featured trips</li>
+                        <input id="searchBarHome" type="text" onkeyup="searchHome()" placeholder="Search..">
+                        <ul class="homeList">
+                            <a href="#marsLink"><li class="listItem" >Mars</li></a>
+                           <a href="#shuts"> <li class="listItem">Shuttles</li></a>
+                           <a href="#upcomeLink"><li class="listItem">Featured trips</li></a> 
                             
                         </ul>
                     </div>
@@ -61,7 +61,7 @@
         </header>
 
 
-        <div class="featuredTrips"> <!--second "page" featured flights-->
+        <div class="featuredTrips" id="marsLink"> <!--second "page" featured flights-->
     
            
 
@@ -91,7 +91,7 @@
 
         <!------------------ travel in style shuttles and more section ------------------>
 
-        <section class="shuttles">
+        <section class="shuttles" id="shuts">
             <div class="shuttlesText">
                 <p class="ftHeading">OUR SHUTTLES</p>  <!-- same class as above ftHeading (blue)-->
 
@@ -120,7 +120,7 @@
 <!--------------- featured trips section---------------------------------------->
             
 
-    <section class="tripsSneakPeak">
+    <section class="tripsSneakPeak"  id="upcomeLink">
         
         <div class="upcomingTripsText">
             <p class="ftHeading">UPCOMING TRIP SNEAK PEAK</p>
