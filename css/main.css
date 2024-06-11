@@ -117,7 +117,17 @@ body::-webkit-scrollbar {
     color: white;
   }
 
- 
+ /* about---*/
+ .abimg{
+    margin-left: 15%;
+ }
+
+.btnfli{
+    margin-left: 33%;
+    width: 35%;
+    height: 40%;
+    
+}
 
   .listItemf{
     display: none;
