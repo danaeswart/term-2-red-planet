@@ -371,6 +371,7 @@ button{
    
 }
 
+/*-------------------- slider for home-------------*/
 
 /* --------------------------- travel in style with.... part of home page-------------*/
 
@@ -1313,14 +1314,17 @@ hr{
 }
 
 .viewCart{
-    background-color: red;
+    background-color: rgb(255, 0,0);
     padding: 10px;
-    width: 200px;
+    width: 60%;
+    
     padding-left: 140px;
-    margin-left:47%;
+    margin-left:40%;
     border-radius: 12px;
     margin-top: 8%;
-    opacity: 65%;
+  
+    text-decoration: none;
+    border: none;
     
 }
 .viewCart:hover{
@@ -1329,6 +1333,9 @@ hr{
 
 .viewCart p{
     color: white !important;
+    width: 100px;
+   ;
+   
     
    
 

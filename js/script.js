@@ -10,6 +10,34 @@
     
 
     }
+
+    /// function for mars slider on home page
+
+
+    let timer;
+    let timerCounter=0;
+    let sliderDivs=["assets/images/marsSliderClipped1.png","assets/images/marsSliderClipped2.png","assets/images/marsSliderClipped3.png","assets/images/marsSliderClipped14.png"];
+    function startSlideTimer(){
+        timer=setInterval(function(){
+            let imgSrc=sliderDivs[timerCounter];
+           
+            let out=`
+             <img src= ${imgSrc}> 
+             `
+
+             document.getElementById("slider").innerHTML=out;
+
+             if(timerCounter==3){
+                timerCounter=0
+             }else{
+                timerCounter++;
+             }
+
+        },3000);
+    }
+
+    startSlideTimer();
+
     // adding animations into my onclick popup----
     // it does move up the screen then doesnt want to reactivate
 
